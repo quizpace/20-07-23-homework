@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+    <title>User Details</title>
+</head>
+<body>
+
+
+<h1 style="text-overflow:ellipsis;">Here Is Your Profile Data Have Fun</h1>
+
+
+    <style>
+
+body {
+  background-image: url('/20-07-23-homework/colors.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+        h1 {
+color: crimson;
+text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+font-size: 80px;
+overflow: hidden; 
+white-space: nowrap; 
+  width: 1000px; 
+  overflow: hidden; 
+  border: 0px solid #ffffff;
+
+        }
+
+        h1:hover {
+  overflow: visible;
+  color: peru
+}
+        
+        #dotted {
+        background-color: rgb(154, 221, 249);
+        width: 250px;
+        height: 250px;
+        color: brown;
+        font-size: 30px;
+        font-family: 'Courier New', monospace;
+        border-radius: 30px;
+        text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+        }
+        
+        #dotted:hover {
+            background-color: rgb(27, 225, 67);
+            color: rgb(68, 68, 149);
+            animation-name: example;
+            animation-duration: 8s;
+}
+
+        #dotted1 {
+        background-color: rgb(154, 249, 173);
+        width: 240px;
+        height: 240px;
+        color: blue;
+        font-size: 30px;
+        font-family: 'Courier New', monospace;
+        border-radius: 40px;
+        text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+        }
+
+        #dotted1:hover {
+            background-color: rgb(167, 244, 35);
+            color: rgb(243, 176, 21);
+            animation-name: example;
+            animation-duration: 5s;
+}
+
+
+        #dotted2 {
+        background-color: rgb(244, 209, 35);
+        width: 230px;
+        height: 230px;
+        color: darkgreen;
+        font-size: 30px;
+        font-family: 'Courier New', monospace;
+        border-radius: 50px;
+        text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+        }
+
+        #dotted2:hover {
+            background-color: rgb(35, 244, 178);
+            color: rgb(100, 0, 27);
+            animation-name: example;
+            animation-duration: 5s;
+}
+
+        #dotted3 {
+        background-color: rgb(179, 154, 249);
+        width: 220px;
+        height: 220px;
+        color: darkmagenta;
+        font-size: 30px;
+        font-family: 'Courier New', monospace;
+        border-radius: 60px;
+        text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+        }
+
+        #dotted3:hover {
+            background-color: rgb(35, 185, 244);
+            color: rgb(0, 5, 100);
+            animation-name: example;
+            animation-duration: 10s;
+}
+
+        #dotted4 {
+        background-color: rgb(249, 176, 154);
+        width: 180px;
+        height: 180px;
+        color: rgb(40, 62, 94);
+        font-size: 30px;
+        font-family: 'Courier New', monospace;
+        border-radius: 50%;
+        text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+        }
+
+        #dotted4:hover {
+            background-color: rgb(244, 143, 35);
+            color: rgb(120, 7, 120);
+            animation-name: example;
+            animation-duration: 15s;
+}
+
+@keyframes example {
+  0%   {background-color:pickColor(); left:0px; top:0px;}
+  10%   {background-color:rgb(122, 227, 23); left:0px; top:0px;}
+  25%  {background-color:rgb(202, 47, 65); left:200px; top:0px;}
+  50%  {background-color:rgb(142, 224, 75); left:200px; top:200px;}
+  75%  {background-color:rgb(98, 35, 244); left:0px; top:200px;}
+  100% {background-color:rgb(71, 47, 255); left:0px; top:0px;}
+
+  0%   {font-size: 40px; left:0px; top:0px;}
+  25%  {font-size: 30px; left:200px; top:0px;}
+  50%  {font-size: 20px; left:200px; top:200px;}
+  75%  {font-size:70px; left:0px; top:200px;}
+  100% {font-size: 10px; left:0px; top:0px;}
+}
+
+
+    </style>
+    
+    
+    <script>
+    
+    const firstName = prompt('Please enter your name');
+    const lastName = prompt('Please enter your Last Name');
+    const userAd = prompt('Please enter your Address');
+    const userBirth = prompt('Please enter the year you were born in');
+    const date =  new Date().getFullYear();
+    const userAge = (date - userBirth);
+    const copy = ('&copy;');
+
+    document.body
+   .appendChild(
+        Object.assign(
+            document.createElement('button'),
+            { innerHTML : firstName ,
+                id: 'dotted' }
+        )
+    )
+    
+    document.body
+    .appendChild(
+        Object.assign(
+            document.createElement('button'),
+            { innerHTML : lastName ,
+                id: 'dotted1' }
+        )
+    )
+
+    document.body
+   .appendChild(
+        Object.assign(
+            document.createElement('button'),
+            { innerHTML : userAd ,
+                id: 'dotted2' }
+        )
+    )
+
+    document.body
+   .appendChild(
+        Object.assign(
+            document.createElement('button'),
+            { innerHTML : userAge ,
+                id: 'dotted3' }
+        )
+    )
+
+    document.body
+   .appendChild(
+        Object.assign(
+            document.createElement('button'),
+            { innerHTML : copy ,
+                id: 'dotted4' }
+        )
+    )
+
+    
+    </script>
+</body>
+</html>
